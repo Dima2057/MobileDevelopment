@@ -8,8 +8,8 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="91dp"
-        android:background="#EDF882"></com.google.android.material.tabs.TabLayout>
+        android:layout_height="68dp"
+        android:background="#FDFDFD"></com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"

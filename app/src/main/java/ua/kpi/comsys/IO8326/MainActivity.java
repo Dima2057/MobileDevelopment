@@ -10,8 +10,8 @@ import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     private int[] tabIcons = {
-            R.drawable.test,
-            R.drawable.test2,
+            R.drawable.ic_baseline_architecture_24,
+            R.drawable.ic_baseline_branding_watermark_24
     };
 
     @Override
