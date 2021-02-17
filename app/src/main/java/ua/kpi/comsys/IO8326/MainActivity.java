@@ -8,8 +8,10 @@ import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
-    private int[] tabIcons = {
+    private final int[] tabIcons = {
             R.drawable.ic_baseline_architecture_24,
             R.drawable.ic_baseline_branding_watermark_24
     };
@@ -26,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout.addTab(tabLayout.newTab().setText("PageOne"));
         tabLayout.addTab(tabLayout.newTab().setText("PageTwo"));
-        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
-        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+        Objects.requireNonNull(tabLayout.getTabAt(0)).setIcon(tabIcons[0]);
+        Objects.requireNonNull(tabLayout.getTabAt(1)).setIcon(tabIcons[1]);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
 

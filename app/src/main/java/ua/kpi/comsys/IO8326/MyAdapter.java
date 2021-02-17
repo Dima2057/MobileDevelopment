@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import java.util.Objects;
+
 public class MyAdapter extends FragmentPagerAdapter {
     Context context;
 
@@ -27,7 +29,7 @@ public class MyAdapter extends FragmentPagerAdapter {
                 fragment = new SecondFragment();
                 break;
         }
-        return fragment;
+        return Objects.requireNonNull(fragment);
     }
 
     @Override

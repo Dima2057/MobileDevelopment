@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">TymochkoApp</string>
     <string name="coordinates">Тимочко Дмитро\nГрупа ІО-83\nІО-8326</string>
+    <string name="test">Switch</string>
+    <string name="changer">Changer</string>
 </resources>
