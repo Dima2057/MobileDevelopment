@@ -1,5 +1,6 @@
-package ua.kpi.comsys.IO8326;
+package ua.kpi.comsys.IO8326.fragments;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,6 +21,8 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+
+import ua.kpi.comsys.IO8326.R;
 
 public class SecondFragment extends Fragment {
     PieChart pieChart;
@@ -45,11 +48,12 @@ public class SecondFragment extends Fragment {
                                  Color.rgb(0, 254, 0)};
 
         GraphView graphView = getActivity().findViewById(R.id.graph);
+        @SuppressLint("UseSwitchCompatOrMaterialCode")
         Switch switcher = getActivity().findViewById(R.id.switcher);
         switcher.setChecked(false);
         series = new LineGraphSeries<>();
         switcher.setOnCheckedChangeListener((CompoundButton buttonView, boolean check) -> {
-            if (check == true) {
+            if (check) {
                 graphView.setVisibility(View.INVISIBLE);
                 pieChart.setVisibility(View.VISIBLE);
             } else {

@@ -1,4 +1,4 @@
-package ua.kpi.comsys.IO8326;
+package ua.kpi.comsys.IO8326.adapters;
 
 import android.content.Context;
 
@@ -8,6 +8,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import java.util.Objects;
+
+import ua.kpi.comsys.IO8326.fragments.PageFragment;
+import ua.kpi.comsys.IO8326.fragments.SecondFragment;
+import ua.kpi.comsys.IO8326.fragments.ThirdFragment;
 
 public class MyAdapter extends FragmentPagerAdapter {
     Context context;
@@ -28,12 +32,15 @@ public class MyAdapter extends FragmentPagerAdapter {
             case 1:
                 fragment = new SecondFragment();
                 break;
+            case 2:
+                fragment = new ThirdFragment();
+                break;
         }
         return Objects.requireNonNull(fragment);
     }
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 }
