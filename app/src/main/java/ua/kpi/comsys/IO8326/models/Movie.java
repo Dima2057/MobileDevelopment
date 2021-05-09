@@ -3,11 +3,12 @@ package ua.kpi.comsys.IO8326.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serializable;
 import java.lang.reflect.Field;
 
 import ua.kpi.comsys.IO8326.R;
 
-public class Movie {
+public class Movie implements Serializable {
     @JsonProperty(value = "Title")
     private String title;
     @JsonProperty(value = "Year")
